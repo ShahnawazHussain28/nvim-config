@@ -102,6 +102,9 @@ local plugins = {
 
 	-- toggle-terminal for neovim
 	{ "akinsho/toggleterm.nvim", version = "*" },
+
+	-- harpoon for quick navigation
+	{ "ThePrimeagen/harpoon" }, -- quick navigation
 }
 
 local opts = {}
