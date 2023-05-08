@@ -19,7 +19,7 @@ local plugins = {
 
 	"github/copilot.vim", -- github copilot for smart code completions
 
-	{ "bluz71/vim-nightfly-guicolors", lazy = false }, -- preferred colorscheme
+	{ "bluz71/vim-nightfly-guicolors", name = "nightfly", lazy = false, priority = 1000 }, -- preferred colorscheme
 
 	"christoomey/vim-tmux-navigator", -- tmux & split window navigation
 
