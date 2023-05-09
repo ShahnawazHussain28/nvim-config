@@ -17,8 +17,8 @@ if not typescript_setup then
 end
 
 -- import rust-tools plugin safely
-local rust_toos_setup, rust_tools = pcall(require, "rust-tools")
-if not rust_toos_setup then
+local rust_tools_setup, rust_tools = pcall(require, "rust-tools")
+if not rust_tools_setup then
 	return
 end
 
