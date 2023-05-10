@@ -105,6 +105,9 @@ local plugins = {
 
 	-- harpoon for quick navigation
 	{ "ThePrimeagen/harpoon" }, -- quick navigation
+
+	-- adding undo tree for longlasting undo history
+	{ "mbbill/undotree" }, -- undo tree
 }
 
 local opts = {}

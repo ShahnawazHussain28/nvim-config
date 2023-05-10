@@ -48,6 +48,9 @@ keymap.set("n", "<leader>tt", ":ToggleTerm<CR>") -- toggleterm open terminal
 -- Lazy package manager
 keymap.set("n", "<leader>ll", ":Lazy<CR>") -- this will open the package manager
 
+-- undotree visualize
+keymap.set("n", "<leader>u", ":UndotreeToggle<CR>") -- toggle undotree
+
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
