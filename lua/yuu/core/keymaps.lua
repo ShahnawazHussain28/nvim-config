@@ -35,6 +35,10 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move line down
 keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move line up
 
+-- put the cursor in the middle when half page up/down
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "<C-d>zz")
+
 -- don't copy to clipboard when cut-pasting
 keymap.set("x", "<leader>p", '"_dP')
 
