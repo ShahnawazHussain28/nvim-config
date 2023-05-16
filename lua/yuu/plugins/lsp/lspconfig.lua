@@ -22,6 +22,12 @@ if not rust_tools_setup then
 	return
 end
 
+-- import clangd plugin safely
+local clangd_setup, clangd = pcall(require, "clangd")
+if not clangd_setup then
+	return
+end
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -90,6 +96,12 @@ lspconfig["tailwindcss"].setup({
 
 -- configure python server
 lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure clangd server
+lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
