@@ -23,10 +23,10 @@ if not rust_tools_setup then
 end
 
 -- import clangd plugin safely
-local clangd_setup, clangd = pcall(require, "clangd")
-if not clangd_setup then
-	return
-end
+-- local clangd_setup, clangd = pcall(require, "clangd")
+-- if not clangd_setup then
+-- 	return
+-- end
 
 local keymap = vim.keymap -- for conciseness
 
@@ -101,10 +101,10 @@ lspconfig["pyright"].setup({
 })
 
 -- configure clangd server
-lspconfig["clangd"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- lspconfig["clangd"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 
 -- configure prisma server
 lspconfig["prismals"].setup({
