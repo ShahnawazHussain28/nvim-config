@@ -3,7 +3,7 @@ require("code_runner").setup({
 		java = {
 			"cd '$dir' && javac $fileName && java $fileNameWithoutExt",
 		},
-		python = "python3 -u",
+		python = "python3 -u $fileName",
 		typescript = "ts-node $fileName",
 		rust = {
 			"cd '$dir' && rustc $fileName && '$dir/$fileNameWithoutExt'",
