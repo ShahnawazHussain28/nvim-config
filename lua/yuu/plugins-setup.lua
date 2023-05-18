@@ -47,9 +47,7 @@ local plugins = {
 	"nvim-lualine/lualine.nvim",
 
 	-- fuzzy finding w/ telescope
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = {
-		cmd = "make",
-	} }, -- dependency for better sorting performance
+	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- dependency for better sorting performance
 	{ "nvim-telescope/telescope.nvim", branch = "0.1.x" }, -- fuzzy finder
 
 	-- autocompletion
@@ -88,9 +86,7 @@ local plugins = {
 	-- treesitter configuration
 	{
 		"nvim-treesitter/nvim-treesitter",
-		build = {
-			run = "TSUpdate",
-		},
+		build = ":TSUpdate",
 	},
 
 	-- auto closing
