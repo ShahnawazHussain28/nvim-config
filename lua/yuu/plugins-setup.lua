@@ -108,6 +108,9 @@ local plugins = {
 
 	-- adding undo tree for longlasting undo history
 	{ "mbbill/undotree" }, -- undo tree
+
+	-- adding code_runner.nvim for running code
+	{ "CRAG666/code_runner.nvim", lazy = true },
 }
 
 local opts = {}
