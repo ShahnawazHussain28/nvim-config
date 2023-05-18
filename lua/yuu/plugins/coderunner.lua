@@ -1,5 +1,4 @@
 require("code_runner").setup({
-	mode = "tab",
 	filetype = {
 		java = {
 			"cd '$dir' && javac $fileName && java $fileNameWithoutExt",
