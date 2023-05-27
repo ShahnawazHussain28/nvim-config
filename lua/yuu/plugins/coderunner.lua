@@ -5,6 +5,7 @@ require("code_runner").setup({
 		},
 		python = "python3 -u $fileName",
 		typescript = "ts-node $fileName",
+		javascript = "node $fileName",
 		rust = {
 			"cd '$dir' && rustc $fileName && '$dir/$fileNameWithoutExt'",
 		},
