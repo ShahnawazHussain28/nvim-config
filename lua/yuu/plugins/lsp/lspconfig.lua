@@ -28,6 +28,9 @@ end
 -- 	return
 -- end
 
+-- import lspconfig/uitl
+local util = require("lspconfig/util")
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -110,6 +113,24 @@ lspconfig.clangd.setup({
 	on_attach = on_attach,
 })
 
+-- configure gopls server
+lspconfig.gopls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = { "gopls" },
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	root_dir = util.root_pattern("go.mod", "go.work", ".git"),
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+		},
+	},
+})
+
 -- configure prisma server
 lspconfig["prismals"].setup({
 	capabilities = capabilities,
@@ -125,10 +146,10 @@ rust_tools.setup({
 })
 
 -- configure astro language server
-lspconfig["astro"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
+-- lspconfig["astro"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
 
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
