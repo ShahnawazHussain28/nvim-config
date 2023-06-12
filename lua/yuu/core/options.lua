@@ -21,10 +21,6 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 opt.scrolloff = 2 -- keep 4 lines above and below cursor when scrolling
 
--- folding
-opt.foldmethod = "expr" -- fold based on expression
-opt.foldexpr = "nvim_treesitter#foldexpr()" -- treesitter folding
-
 -- appearance
 
 -- turn on termguicolors for nightfly colorscheme to work
@@ -49,29 +45,3 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 function P(str)
 	print(vim.inspect(str))
 end
-
-local api = vim.api
-local M = {}
--- function to create a list of commands and convert them to autocommands
--------- This function is taken from https://github.com/norcalli/nvim_utils
-function M.nvim_create_augroups(definitions)
-	for group_name, definition in pairs(definitions) do
-		api.nvim_command("augroup " .. group_name)
-		api.nvim_command("autocmd!")
-		for _, def in ipairs(definition) do
-			local command = table.concat(vim.tbl_flatten({ "autocmd", def }), " ")
-			api.nvim_command(command)
-		end
-		api.nvim_command("augroup END")
-	end
-end
-
--- function to remove folds when opening a file
-local autoCommands = {
-	-- other autocommands
-	open_folds = {
-		{ "BufReadPost,FileReadPost", "*", "normal zR" },
-	},
-}
-
-M.nvim_create_augroups(autoCommands)
