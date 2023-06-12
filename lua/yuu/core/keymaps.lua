@@ -16,6 +16,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- fold toggle
+keymap.set("n", "<leader>fo", "za") -- toggle fold when cursor on fold
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
