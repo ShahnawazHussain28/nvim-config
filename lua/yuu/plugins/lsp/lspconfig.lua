@@ -131,6 +131,12 @@ lspconfig.gopls.setup({
 	},
 })
 
+-- configure docker server
+lspconfig["dockerls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure prisma server
 lspconfig["prismals"].setup({
 	capabilities = capabilities,
