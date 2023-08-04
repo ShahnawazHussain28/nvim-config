@@ -17,6 +17,8 @@ local plugins = {
 
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 
+	-- { "codota/tabnine-nvim", build = "./dl_binaries.sh" }, -- tabnine for smart code completions
+
 	"github/copilot.vim", -- github copilot for smart code completions
 
 	{ "bluz71/vim-nightfly-guicolors", name = "nightfly", lazy = false, priority = 1000 }, -- preferred colorscheme
@@ -95,6 +97,7 @@ local plugins = {
 
 	-- git integration
 	"lewis6991/gitsigns.nvim", -- show line modifications on left hand side
+	"tpope/vim-fugitive", -- for handling git commands
 
 	-- toggle-terminal for neovim
 	{ "akinsho/toggleterm.nvim", version = "*" },

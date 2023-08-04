@@ -74,6 +74,14 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+-- fugitive custom keymaps
+keymap.set("n", "<leader>G", ":Git<CR>") -- git status
+keymap.set("n", "<leader>gw", ":Gwrite<CR>") -- git add current file
+keymap.set("n", "<leader>gC", ":Git commit<CR>") -- git commit
+keymap.set("n", "<leader>gds", ":Gvdiffsplit!<CR>") -- git merge conflict resolution
+keymap.set("n", "<leader>gdp", ":diffput<CR>") -- diffput
+keymap.set("n", "<leader>gdg", ":diffget<CR>") -- diffget
+
 -- code_runner keymaps
 keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, silent = false }) -- run code
 keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = false }) -- run code
