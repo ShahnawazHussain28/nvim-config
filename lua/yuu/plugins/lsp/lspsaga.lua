@@ -1,6 +1,7 @@
 return {
 	"glepnir/lspsaga.nvim",
 	branch = "main",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		{ "nvim-tree/nvim-web-devicons" },
 		{ "nvim-treesitter/nvim-treesitter" },
