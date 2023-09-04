@@ -1,6 +1,9 @@
 return {
 	"jose-ellias-alvarez/null-ls.nvim",
 	event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
+	},
 	config = function()
 		local null_ls = require("null-ls")
 

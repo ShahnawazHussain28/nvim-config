@@ -3,6 +3,10 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
+	keys = {
+		{ "<leader>hh", "<cmd>require('harpoon.ui').toggle_quick_menu()<CR>" },
+		{ "<leader>ha", "<cmd>require('harpoon.mark').add_file()<CR>" },
+	},
 	config = function()
 		local mark = require("harpoon.mark")
 		local ui = require("harpoon.ui")

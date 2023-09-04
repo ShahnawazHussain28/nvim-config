@@ -46,17 +46,8 @@ keymap.set("x", "<leader>p", '"_dP')
 -- Plugin Keybinds
 ----------------------
 
--- toggleterm
-keymap.set("n", "<leader>tt", ":ToggleTerm<CR>") -- toggleterm open terminal
-
 -- Lazy package manager
 keymap.set("n", "<leader>ll", ":Lazy<CR>") -- this will open the package manager
-
--- undotree visualize
-keymap.set("n", "<leader>u", ":UndotreeToggle<CR>") -- toggle undotree
-
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
@@ -73,18 +64,6 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
-
--- fugitive custom keymaps
-keymap.set("n", "<leader>G", ":Git<CR>") -- git status
-keymap.set("n", "<leader>gw", ":Gwrite<CR>") -- git add current file
-keymap.set("n", "<leader>gC", ":Git commit<CR>") -- git commit
-keymap.set("n", "<leader>gds", ":Gvdiffsplit!<CR>") -- git merge conflict resolution
-keymap.set("n", "<leader>gdp", ":diffput<CR>") -- diffput
-keymap.set("n", "<leader>gdg", ":diffget<CR>") -- diffget
-
--- code_runner keymaps
-keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, silent = false }) -- run code
-keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = false }) -- run code
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

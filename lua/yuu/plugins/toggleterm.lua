@@ -4,6 +4,7 @@ return {
 	keys = { "<leader>tt", "<cmd>ToggleTerm<CR>" },
 	config = function()
 		local toggleterm = require("toggleterm")
+		local keymap = vim.keymap -- for conciseness
 
 		-- configure/enable toggleterm
 		toggleterm.setup({
@@ -28,6 +29,9 @@ return {
 				},
 			},
 		})
+
+		-- keymap for toggleterm
+		keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>")
 
 		function _G.set_terminal_keymaps()
 			local opts = { noremap = true }

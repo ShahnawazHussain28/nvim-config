@@ -1,8 +1,9 @@
 return {
 	"CRAG666/code_runner.nvim",
 	lazy = true,
-	keys = { "<leader>rr", ":RunCode<CR>" },
+	keys = { "<leader>rr", "<cmd>RunCode<CR>" },
 	config = function()
+		local keymap = vim.keymap -- for custom mappings
 		require("code_runner").setup({
 			filetype = {
 				java = {
@@ -19,5 +20,9 @@ return {
 				},
 			},
 		})
+
+		-- code_runner keymaps
+		keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, silent = false }) -- run code
+		keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = false }) -- run code
 	end,
 }
