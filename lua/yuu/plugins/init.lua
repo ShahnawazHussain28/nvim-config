@@ -7,6 +7,7 @@ return {
 	{ "folke/todo-comments.nvim", dependencies = {
 		{ "nvim-lua/plenary.nvim" },
 	} },
+	"github/copilot.vim", -- github copilot for smart code completions
 	"simrat39/rust-tools.nvim", -- rust tools for rust-analyzer
 	"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports,
 }
