@@ -3,6 +3,8 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local keymap = vim.keymap -- for custom keymaps
+		local gitsigns = require("gitsigns") -- for gitsigns config
+		gitsigns.setup()
 
 		-- telescope git commands (not on youtube nvim video)
 		keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
