@@ -4,14 +4,11 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports,
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
 
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-		local typescript = require("typescript")
 
 		local rust_tools = require("rust-tools")
 
@@ -65,11 +62,9 @@ return {
 		})
 
 		-- configure typescript server with plugin
-		typescript.setup({
-			server = {
-				capabilities = capabilities,
-				on_attach = on_attach,
-			},
+		lspconfig.tsserver.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
 		})
 
 		-- configure css server
