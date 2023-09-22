@@ -130,8 +130,23 @@ return {
 			server = {
 				capabilities = capabilities,
 				on_attach = on_attach,
+				filetypes = { "rust" },
 			},
 		})
+
+		-- lspconfig.rust_analyzer.setup({
+		-- 	on_attach = on_attach,
+		-- 	capabilities = capabilities,
+		-- 	filetypes = { "rust" },
+		-- 	root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
+		-- 	settings = {
+		-- 		["rust-analyzer"] = {
+		-- 			cargo = {
+		-- 				allFeatures = true,
+		-- 			},
+		-- 		},
+		-- 	},
+		-- })
 
 		-- configure astro language server
 		-- lspconfig["astro"].setup({
