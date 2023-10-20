@@ -36,7 +36,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-				["N"] = cmp.mapping(function(fallback)
+				["<A-n>"] = cmp.mapping(function(fallback)
 					if luasnip.expand_or_jumpable() then
 						luasnip.expand_or_jump()
 					else
@@ -44,7 +44,7 @@ return {
 					end
 				end, { "i", "s" }),
 
-				["P"] = cmp.mapping(function(fallback)
+				["<A-p>"] = cmp.mapping(function(fallback)
 					if luasnip.jumpable(-1) then
 						luasnip.jump(-1)
 					else
