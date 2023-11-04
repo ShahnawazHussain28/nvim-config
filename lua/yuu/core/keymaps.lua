@@ -42,6 +42,12 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 -- don't copy to clipboard when cut-pasting
 keymap.set("x", "<leader>p", '"_dP')
 
+-- change the "J" command to a little stable
+keymap.set("n", "J", "mzJ`z")
+
+-- change the a file to executable
+keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
