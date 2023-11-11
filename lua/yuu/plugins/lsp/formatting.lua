@@ -20,7 +20,6 @@ return {
 				lua = { "stylua" },
 				python = { "prettier" },
 				go = { "gofumpt" },
-				rust = { "rustfmt", "rustywind" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

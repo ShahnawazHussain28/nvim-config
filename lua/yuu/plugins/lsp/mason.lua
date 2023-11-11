@@ -45,6 +45,7 @@ return {
 				"prettier", -- ts/js formatter
 				"stylua", -- lua formatter
 				"eslint_d", -- ts/js linter
+				"pylint", -- pythong linter
 				"gofumpt", -- go formatter
 				"rustywind", -- tailwind classes rust formatter
 			},
