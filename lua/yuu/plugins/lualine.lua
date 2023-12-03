@@ -55,6 +55,22 @@ return {
 				theme = my_lualine_theme,
 			},
 			sections = {
+				lualine_c = {
+					{
+						"filename",
+						path = 1,
+						cond = function()
+							return vim.fn.winwidth(0) > 70
+						end,
+					},
+					{
+						"filename",
+						path = 2,
+						cond = function()
+							return vim.fn.winwidth(0) <= 70
+						end,
+					},
+				},
 				lualine_x = {
 					{
 						lazy_status.updates,
