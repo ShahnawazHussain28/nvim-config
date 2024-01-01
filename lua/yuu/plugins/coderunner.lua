@@ -18,6 +18,9 @@ return {
 				cpp = {
 					"cd '$dir' && g++ $fileName && '$dir/a.out'",
 				},
+				c = {
+					"cd '$dir' && gcc $fileName && '$dir/a.out'",
+				},
 			},
 		})
 

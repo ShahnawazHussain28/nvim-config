@@ -8,7 +8,6 @@ return {
 		crates.setup({
 			smart_insert = true,
 			insert_closing_quote = true,
-			avoid_prerelease = true,
 			autoload = true,
 			autoupdate = true,
 			autoupdate_throttle = 250,
@@ -18,8 +17,10 @@ return {
 			notification_title = "Crates",
 			curl_args = { "-sL", "--retry", "1" },
 			max_parallel_requests = 80,
+			expand_crate_moves_cursor = true,
 			open_programs = { "xdg-open", "open" },
 			disable_invalid_feature_diagnostic = false,
+			enable_update_available_warning = true,
 			text = {
 				loading = "   Loading",
 				version = "   %s",

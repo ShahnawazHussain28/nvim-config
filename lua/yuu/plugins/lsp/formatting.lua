@@ -24,7 +24,7 @@ return {
 			format_on_save = {
 				lsp_fallback = true, -- change this to true if want to fail to formatting if no LSP formatter is available
 				async = false,
-				timeout_ms = 500,
+				timeout_ms = 1000,
 			},
 		})
 
