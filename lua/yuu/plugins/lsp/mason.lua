@@ -30,7 +30,7 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"pyright",
-				"prismals",
+				-- "prismals",
 				"clangd",
 				"gopls",
 				"dockerls",
@@ -47,6 +47,7 @@ return {
 				"stylua", -- lua formatter
 				"eslint_d", -- ts/js linter
 				"pylint", -- pythong linter
+				"black", -- python formatter
 				-- "cpplint", -- c++ linter
 				"gofumpt", -- go formatter
 				"rustywind", -- tailwind classes rust formatter

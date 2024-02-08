@@ -18,7 +18,7 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
-				python = { "prettier" },
+				python = { "prettier", "black" },
 				go = { "gofumpt" },
 			},
 			format_on_save = {
