@@ -14,6 +14,11 @@ return {
 			cpp = { "clangd" },
 		}
 
+		local eslint = lint.linters.eslint_d
+		eslint.args = {
+			"--no-warn-ignored",
+		}
+
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
