@@ -1,9 +1,6 @@
 return {
-	"Exafunction/codeium.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"hrsh7th/nvim-cmp",
-	},
+	"Exafunction/codeium.vim",
+	event = "BufEnter",
 	config = function()
 		require("codeium").setup({})
 	end,
