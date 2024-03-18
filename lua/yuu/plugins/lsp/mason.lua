@@ -30,11 +30,7 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"pyright",
-				-- "prismals",
 				"clangd",
-				"gopls",
-				"dockerls",
-				"svelte",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
@@ -48,8 +44,6 @@ return {
 				"eslint_d", -- ts/js linter
 				"pylint", -- pythong linter
 				"black", -- python formatter
-				-- "cpplint", -- c++ linter
-				"gofumpt", -- go formatter
 				"rustywind", -- tailwind classes rust formatter
 			},
 		})

@@ -80,44 +80,11 @@ return {
 		})
 
 		-- configure clangd server
-		-- lspconfig["clangd"].setup({
-		-- 	capabilities = capabilities,
-		-- 	on_attach = on_attach,
-		-- })
-		-- lspconfig.clangd.setup({
-		-- 	capabilities = capabilities,
-		-- 	on_attach = on_attach,
-		-- })
-
-		-- configure gopls server
-		lspconfig.gopls.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			cmd = { "gopls" },
-			filetypes = { "go", "gomod", "gowork", "gotmpl" },
-			root_dir = util.root_pattern("go.mod", "go.work", ".git"),
-			settings = {
-				gopls = {
-					completeUnimported = true,
-					usePlaceholders = true,
-					analyses = {
-						unusedparams = true,
-					},
-				},
-			},
-		})
-
-		-- configure docker server
-		lspconfig["dockerls"].setup({
+		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure prisma server
-		lspconfig["prismals"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 
 		-- configure rust-analyzer server with rust tools
 		rust_tools.setup({
@@ -128,42 +95,6 @@ return {
 			},
 		})
 
-		-- configure svelte server
-		lspconfig["svelte"].setup({
-			capabilities = capabilities,
-			on_attach = function(client, bufnr)
-				on_attach(client, bufnr)
-
-				vim.api.nvim_create_autocmd("BufWritePost", {
-					pattern = { "*.js", "*.ts" },
-					callback = function(ctx)
-						if client.name == "svelte" then
-							client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-						end
-					end,
-				})
-			end,
-		})
-
-		-- lspconfig.rust_analyzer.setup({
-		-- 	on_attach = on_attach,
-		-- 	capabilities = capabilities,
-		-- 	filetypes = { "rust" },
-		-- 	root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
-		-- 	settings = {
-		-- 		["rust-analyzer"] = {
-		-- 			cargo = {
-		-- 				allFeatures = true,
-		-- 			},
-		-- 		},
-		-- 	},
-		-- })
-
-		-- configure astro language server
-		-- lspconfig["astro"].setup({
-		-- 	capabilities = capabilities,
-		-- 	on_attach = on_attach,
-		-- })
 
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({

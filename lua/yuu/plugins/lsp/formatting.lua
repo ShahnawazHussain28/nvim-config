@@ -10,16 +10,12 @@ return {
 				typescript = { "prettier", "rustywind" },
 				javascriptreact = { "prettier", "rustywind" },
 				typescriptreact = { "prettier", "rustywind" },
-				svelte = { "prettier", "rustywind" },
 				css = { "prettier", "rustywind" },
 				html = { "prettier", "rustywind" },
 				json = { "prettier" },
-				yaml = { "prettier" },
 				markdown = { "prettier" },
-				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "black" },
-				go = { "gofumpt" },
 			},
 			format_on_save = {
 				lsp_fallback = true, -- change this to true if want to fail to formatting if no LSP formatter is available
