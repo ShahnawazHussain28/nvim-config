@@ -36,6 +36,9 @@ return {
 			keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts) -- jump to previous diagnostic in buffer
 			keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts) -- jump to next diagnostic in buffer
 			keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- show documentation for what is under cursor
+
+			-- attach lsp signature
+			require("lsp_signature").on_attach()
 		end
 
 		-- used to enable autocompletion (assign to every lsp server config)
