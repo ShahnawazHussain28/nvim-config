@@ -73,8 +73,8 @@ return {
 		vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = "#FF0000" }) -- Red for unstaged deleted lines
 
 		-- Staged Highlight Colors (darker shades of unstaged colors)
-		vim.api.nvim_set_hl(0, "GitSignsStagedAdd", { fg = "#454545" }) -- Darker gray for staged added lines
-		vim.api.nvim_set_hl(0, "GitSignsStagedChange", { fg = "#000045" }) -- Darker blue for staged changed lines
-		vim.api.nvim_set_hl(0, "GitSignsStagedDelete", { fg = "#450000" }) -- Dark red for staged deleted lines
+		vim.api.nvim_set_hl(0, "GitSignsStagedAdd", { fg = "#858585" }) -- Darker gray for staged added lines
+		vim.api.nvim_set_hl(0, "GitSignsStagedChange", { fg = "#000085" }) -- Darker blue for staged changed lines
+		vim.api.nvim_set_hl(0, "GitSignsStagedDelete", { fg = "#850000" }) -- Dark red for staged deleted lines
 	end,
 }
