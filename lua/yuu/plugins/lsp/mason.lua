@@ -32,7 +32,6 @@ return {
 				"pyright",
 				-- "prismals",
 				"clangd",
-				"gopls",
 				"dockerls",
 				"svelte",
 			},
@@ -49,7 +48,6 @@ return {
 				"pylint", -- pythong linter
 				"black", -- python formatter
 				-- "cpplint", -- c++ linter
-				"gofumpt", -- go formatter
 				"rustywind", -- tailwind classes rust formatter
 				"eslint", -- ts/js/ linter
 			},
