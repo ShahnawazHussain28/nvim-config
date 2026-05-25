@@ -18,8 +18,6 @@ return {
 			curl_args = { "-sL", "--retry", "1" },
 			max_parallel_requests = 80,
 			expand_crate_moves_cursor = true,
-			open_programs = { "xdg-open", "open" },
-			disable_invalid_feature_diagnostic = false,
 			enable_update_available_warning = true,
 			text = {
 				loading = "   Loading",
@@ -134,19 +132,8 @@ return {
 					jump_back = { "<c-o>", "<C-RightMouse>" },
 				},
 			},
-			src = {
+			completion = {
 				insert_closing_quote = true,
-				text = {
-					prerelease = "  pre-release ",
-					yanked = "  yanked ",
-				},
-				coq = {
-					enabled = false,
-					name = "Crates",
-				},
-				cmp = {
-					enabled = true,
-				},
 			},
 			on_attach = function(bufnr) end,
 		})
