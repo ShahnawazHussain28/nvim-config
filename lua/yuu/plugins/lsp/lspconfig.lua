@@ -67,23 +67,7 @@ return {
 		})
 		vim.lsp.enable("gopls")
 
-		vim.lsp.config("svelte", { capabilities = capabilities, on_attach = on_attach })
-		vim.lsp.enable("svelte")
-		vim.api.nvim_create_autocmd("LspAttach", {
-			callback = function(args)
-				local client = vim.lsp.get_client_by_id(args.data.client_id)
-				if client and client.name == "svelte" then
-					vim.api.nvim_create_autocmd("BufWritePost", {
-						pattern = { "*.js", "*.ts" },
-						callback = function(ctx)
-							client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-						end,
-					})
-				end
-			end,
-		})
-
-		vim.lsp.config("lua_ls", {
+vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
