@@ -6,7 +6,6 @@ return {
 	},
 	config = function()
 		require("codeium").setup({
-			-- Optionally disable cmp source if using virtual text only
 			enable_cmp_source = false,
 			virtual_text = {
 				enabled = true,
@@ -18,7 +17,7 @@ return {
 				map_keys = true,
 				accept_fallback = nil,
 				key_bindings = {
-					accept = "<C-y>",
+					accept = "<Tab>",
 					accept_word = false,
 					accept_line = false,
 					clear = false,
